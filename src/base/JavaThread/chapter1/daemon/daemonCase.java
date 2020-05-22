@@ -16,7 +16,7 @@ public class daemonCase {
         //实例 队列
         Deque deque = new ConcurrentLinkedDeque();
         // 循环100次 写入队列
-        virtualWriterTack virtualWriterTack = new virtualWriterTack(deque);
+        virtualWriterTask virtualWriterTack = new virtualWriterTask(deque);
         //for (int i = 0; i <Runtime.getRuntime().availableProcessors() ; i++) {
         for (int i = 0; i <4 ; i++) {
         Thread t1 = new Thread(virtualWriterTack);
@@ -30,7 +30,7 @@ public class daemonCase {
         //}
 
         // 守护线程 删除队列 过期时间的元素
-        virtualCleanerTack virtualCleanerTack = new virtualCleanerTack(deque);
+        virtualCleanerTask virtualCleanerTack = new virtualCleanerTask(deque);
         virtualCleanerTack.start();
 
 

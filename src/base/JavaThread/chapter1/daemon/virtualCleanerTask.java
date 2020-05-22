@@ -10,10 +10,10 @@ import java.util.Deque;
  * Author:wuxinrui
  */
 
-public class virtualCleanerTack extends Thread {
+public class virtualCleanerTask extends Thread {
     private Deque<virtualEvent> deque;
 
-    public virtualCleanerTack(Deque<virtualEvent> deque) {
+    public virtualCleanerTask(Deque<virtualEvent> deque) {
         this.deque = deque;
         setDaemon(true);//***
     }

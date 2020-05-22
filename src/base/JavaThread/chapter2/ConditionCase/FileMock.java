@@ -15,6 +15,7 @@ public class FileMock {
     private String[] content;
     private int index;
     private int index2;
+
     public FileMock(int size, int length){
         content = new String[size];
         for (int i = 0; i< size; i++){

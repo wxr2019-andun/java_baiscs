@@ -41,6 +41,7 @@ public class Buffer {
         lock.lock();
         try {
             while (buffer.size() == maxSize) {
+//                也就是说-   space（）Condition
                 space.await();
             }
             buffer.offer(line);

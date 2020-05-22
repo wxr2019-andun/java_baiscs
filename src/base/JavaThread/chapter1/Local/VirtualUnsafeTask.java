@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * Author:wuxinrui
  */
 
-public class VirtualUnsafeTack implements Runnable{
+public class VirtualUnsafeTask implements Runnable{
     private Date startDate;
     @Override
     public void run() {

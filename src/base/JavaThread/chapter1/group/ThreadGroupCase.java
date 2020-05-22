@@ -12,7 +12,7 @@ package base.JavaThread.chapter1.group;
 public class ThreadGroupCase {
     public static void main(String[] args) {
         VirtualMyThreadGroup virtualMyThreadGroup = new VirtualMyThreadGroup("virtualMyThreadGroup");
-        Tack tack = new Tack();
+        Task tack = new Task();
         //int off = Runtime.getRuntime().availableProcessors();
         int off=4;
         for (int i = 0; i <off ; i++) {

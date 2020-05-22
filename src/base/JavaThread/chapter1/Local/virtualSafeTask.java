@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
  * Author:wuxinrui
  */
 
-public class virtualSafeTack implements Runnable {
+public class virtualSafeTask implements Runnable {
 
     //***
     //线程本地变量机制为每个使用该属性的线程保存了独立的属性值。可以用get()和set()方法来分别读

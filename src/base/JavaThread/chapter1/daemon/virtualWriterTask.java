@@ -12,10 +12,10 @@ import java.util.concurrent.TimeUnit;
  * Author:wuxinrui
  */
 
-public class virtualWriterTack implements Runnable {
+public class virtualWriterTask implements Runnable {
     private Deque<virtualEvent> deque;
 
-    public virtualWriterTack(Deque<virtualEvent> deque) {
+    public virtualWriterTask(Deque<virtualEvent> deque) {
         this.deque = deque;
     }
 

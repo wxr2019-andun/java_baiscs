@@ -15,11 +15,11 @@ package base.JavaThread.chapter1.factoryCase;
 public class TFCase {
     public static void main(String[] args) {
         VirtualMyThreadFactory virtualMyThreadFactory = new VirtualMyThreadFactory("virtualMyThreadFactory");
-        FactoryTack factoryTack = new FactoryTack();
+        FactoryTask factoryTask = new FactoryTask();
 
         Thread thread;
         for (int i = 0; i < 10; i++) {
-            thread=virtualMyThreadFactory.newThread(factoryTack);
+            thread=virtualMyThreadFactory.newThread(factoryTask);
             thread.start();
         }
         System.out.println("factory stats-");

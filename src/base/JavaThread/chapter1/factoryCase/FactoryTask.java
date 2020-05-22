@@ -9,7 +9,7 @@ import java.util.concurrent.TimeUnit;
  * Author:wuxinrui
  */
 
-public class FactoryTack implements Runnable{
+public class FactoryTask implements Runnable{
     @Override
     public void run() {
        try{

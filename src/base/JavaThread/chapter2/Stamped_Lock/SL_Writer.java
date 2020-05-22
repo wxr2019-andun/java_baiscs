@@ -21,11 +21,14 @@ public class SL_Writer implements Runnable{
 
     @Override
     public void run() {
+
+
+
         //【以上所有方法都会返回一个在锁中使用称为票据（stamp）的long型返回值。如果方法返回0，则表示当前线程获取锁失败。】
-        long  stamp = stampedLock.writeLock();
+
 
         for (int i = 0; i < 10; i++) {
-
+            long  stamp = stampedLock.writeLock();
             try {
                 System.out.println("writer lock acquired: "+stamp);
                 position.setX(position.getX()+1);
@@ -34,8 +37,14 @@ public class SL_Writer implements Runnable{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             } finally {
-                stampedLock.unlock(stamp);
+                stampedLock.unlockWrite(stamp);
                 System.out.printf("writer %d : lock released \n ",stamp);
+            }
+
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
 

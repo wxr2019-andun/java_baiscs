@@ -23,8 +23,8 @@ public class EventStorage {
 // wait会跳出代码嘛？   不跳出顺序执行 睡眠线程就没有意义了
 //    懂了-这里一直取值-直到 条件通过 后执行代码.那这里wait意义不大呐
 
-    public synchronized void set() {
-        while (storage.size() == maxSize) {
+            public synchronized void set() {
+                while (storage.size() == maxSize) {
             try {
                 wait();
             } catch (InterruptedException e) {

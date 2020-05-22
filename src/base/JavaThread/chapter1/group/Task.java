@@ -9,7 +9,7 @@ import java.util.Random;
  * Author:wuxinrui
  */
 
-public class Tack implements Runnable {
+public class Task implements Runnable {
 
     @Override
     public void run() {
