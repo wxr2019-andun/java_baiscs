@@ -29,8 +29,7 @@ public class PrintQueue {
             semaphore.acquire(); //从该信号量获取许可证，阻止直到可用，或线程为 interrupted 。
             int assignedPrinter = getPrinter();
             long duration = (long) (Math.random() * 10);
-            System.out.printf("%s - %s: 打印队列:在打印机中打印作业 %d 持续： %d 秒\n",
-                    new Date(), Thread.currentThread().getName(), assignedPrinter, duration);
+            System.out.printf("%s - %s: 打印队列:在打印机中打印作业 %d 持续： %d 秒\n", new Date(), Thread.currentThread().getName(), assignedPrinter, duration);
 
             TimeUnit.SECONDS.sleep(duration);
         } catch (InterruptedException e) {
